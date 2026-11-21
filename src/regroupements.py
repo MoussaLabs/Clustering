@@ -8,9 +8,9 @@ Pourquoi regrouper ?
       peu de modalités. On vise donc environ 4 à 6 modalités par variable.
 
 Ce script :
-    1. lit le fichier d'origine td_clustering_karafun.csv
+    1. lit le fichier d'origine data/raw/td_clustering_karafun.csv
     2. regroupe les modalités de plusieurs variables
-    3. enregistre le résultat dans td_clustering_karafun_regroupe.csv
+    3. enregistre le résultat dans data/processed/td_clustering_karafun_regroupe.csv
        (le fichier d'origine n'est PAS modifié)
 
 Lancement (depuis le dossier Clustering) :
@@ -27,7 +27,7 @@ import pandas as pd
 
 
 # 1. Chargement des données
-df = pd.read_csv("td_clustering_karafun.csv")
+df = pd.read_csv("data/raw/td_clustering_karafun.csv")
 
 
 # ---------------------------------------------------------------
@@ -261,5 +261,5 @@ for col in variables_regroupees:
 # 13. Enregistrement du nouveau fichier
 # ---------------------------------------------------------------
 # index=False : on n'écrit pas les numéros de ligne de pandas dans le CSV.
-df.to_csv("td_clustering_karafun_regroupe.csv", index=False)
-print("\nFichier enregistré : td_clustering_karafun_regroupe.csv")
+df.to_csv("data/processed/td_clustering_karafun_regroupe.csv", index=False)
+print("\nFichier enregistré : data/processed/td_clustering_karafun_regroupe.csv")

@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 # ---------------------------------------------------------------
 # 1. Chargement des données
 # ---------------------------------------------------------------
-df = pd.read_csv("td_clustering_karafun.csv")
+df = pd.read_csv("data/raw/td_clustering_karafun.csv")
 
 print("=" * 60)
 print("1. APERÇU GÉNÉRAL")
@@ -104,6 +104,6 @@ for ax in axes[nb:]:
     ax.set_visible(False)
 
 plt.tight_layout()
-plt.savefig("stats_descriptives.png", dpi=100)
-print("\nGraphiques enregistrés dans stats_descriptives.png")
+plt.savefig("outputs/figures/stats_descriptives.png", dpi=100)
+print("\nGraphiques enregistrés dans outputs/figures/stats_descriptives.png")
 plt.show()
